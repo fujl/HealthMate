@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/top_bar_title"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:background="@drawable/common_background"
+        android:clickable="true"
+        android:gravity="center"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="@string/app_name"
+        android:textColor="@color/colorBubbleText"
+        android:textSize="18sp"/>
+
+    <ImageButton
+        android:id="@+id/top_bar_left_btn"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:background="@drawable/common_background"
+        android:clickable="true"
+        android:src="@drawable/ic_back"/>
+
+    <ImageButton
+        android:id="@+id/top_bar_right_btn"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/common_background"
+        android:clickable="true"
+        android:src="@drawable/ic_back"/>
+
+
+    <TextView
+        android:id="@+id/top_bar_left_title"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@drawable/common_background"
+        android:clickable="true"
+        android:gravity="center"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:text="@string/app_name"
+        android:textColor="#666666"
+        android:textSize="17sp"/>
+
+    <TextView
+        android:id="@+id/top_bar_right_title"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/common_background"
+        android:clickable="true"
+        android:gravity="center"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:text="@string/app_name"
+        android:textColor="#666666"
+        android:textSize="17sp"/>
+
+</RelativeLayout>

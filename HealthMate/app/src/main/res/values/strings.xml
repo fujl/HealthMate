@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">健康伴侣</string>
+
+    <!-- 权限相关 -->
+    <string name="permission_title">提示</string>
+    <string name="permission_sure">确定</string>
+    <string name="permission_msg_storage">健康伴侣需要获取您的SD卡储存权限，用于存储图文相关图片。如果您拒绝，将无法显示相关图片！</string>
+    <string name="permission_msg_storage_failed">存储权限已被禁止!</string>
+    <string name="permission_location">健康伴侣需要获取您的定位权限,用户提交随访表时获取您的位置信息</string>
+
+    <string name="user_name_tip">"请输入用户名"</string>
+    <string name="user_pwd_tip">"请输入密码"</string>
+    <string name="login">登 录</string>
+
+    <string name="toast_time_out">当前网络不顺畅，请检查网络</string>
+    <string name="toast_net_error">当前没有网络，请检查网络是否开启</string>
+    <string name="toast_service_error">服务器异常，请重试</string>
+</resources>

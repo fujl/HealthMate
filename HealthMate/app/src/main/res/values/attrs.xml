@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SimpleImageView">
+        <attr name="src" format="reference"/>
+        <attr name="scaleType">
+            <enum name="fitXy" value="0"/>
+            <enum name="centerCrop" value="1"/>
+            <enum name="centerInside" value="2"/>
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="AsyncImageView">
+        <attr name="isMemoryCacheEnable" format="boolean"/>
+        <attr name="isDiskCacheEnable" format="boolean"/>
+        <attr name="loadingDrawable" format="reference"/>
+        <attr name="loadFailedDrawable" format="reference"/>
+        <attr name="cornerRadius" format="integer"/>
+        <attr name="imageShape" format="enum">
+            <enum name="circle" value="0"/>
+            <enum name="round" value="1"/>
+            <enum name="normal" value="2"/>
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="TopBar">
+        <attr name="titleText" format="string"/>
+        <attr name="leftText" format="string"/>
+        <attr name="rightText" format="string"/>
+        <attr name="leftOnClick" format="string"/>
+        <attr name="rightOnClick" format="string"/>
+        <attr name="titleOnClick" format="string"/>
+        <attr name="leftIcon" format="reference"/>
+        <attr name="rightIcon" format="reference"/>
+        <attr name="function">
+            <flag name="NONE" value="0"/>
+            <flag name="LEFT_TITLE" value="2"/>
+            <flag name="LEFT_BTN" value="4"/>
+            <flag name="TITLE" value="8"/>
+            <flag name="RIGHT_TITLE" value="16"/>
+            <flag name="RIGHT_BTN" value="32"/>
+        </attr>
+    </declare-styleable>
+</resources>
