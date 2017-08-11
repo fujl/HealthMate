@@ -15,4 +15,6 @@
     <string name="toast_time_out">当前网络不顺畅，请检查网络</string>
     <string name="toast_net_error">当前没有网络，请检查网络是否开启</string>
     <string name="toast_service_error">服务器异常，请重试</string>
+
+    <string name="login_result_fail">登录失败</string>
 </resources>

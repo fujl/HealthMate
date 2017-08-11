@@ -37,7 +37,7 @@
                 />
 
             <ImageView
-                android:id="@+id/login_clear_phone"
+                android:id="@+id/login_clear_username"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"

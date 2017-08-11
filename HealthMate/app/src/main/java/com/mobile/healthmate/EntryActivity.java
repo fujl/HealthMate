@@ -30,7 +30,6 @@ public class EntryActivity extends BaseActivity {
             if (msg.what == HANDLER_WHAT_START) {
                 if (userManager.isLogin()) {
                     // 自动登录
-
                 } else {
                     // 进入登录页
                     startActivity(new Intent(getActivity(), LoginActivity.class));

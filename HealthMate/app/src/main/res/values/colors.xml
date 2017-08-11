@@ -16,4 +16,6 @@
     <color name="coverBlackBackground">#80000000</color>
 
     <color name="colorBubbleText">#333333</color>
+
+    <color name="login_btn_gray">#cccccc</color>
 </resources>

@@ -37,7 +37,7 @@ public class LoginRequester extends SimpleRequester<LoginInfo> {
     @Override
     protected void onPutParams(@NonNull Map<String, String> params) {
         params.put("username", username);
-        params.put("page", password);
+        params.put("password", password);
     }
 
     @NonNull

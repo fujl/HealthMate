@@ -120,9 +120,9 @@ public class UserManager extends BaseManager {
      * 登录
      * 注意：本方法不能多次调用，正在登录或者已经登录后不可再调用
      *
-     * @param username              账号
-     * @param password              密码
-     * @param onResultListener      结果监听
+     * @param username         账号
+     * @param password         密码
+     * @param onResultListener 结果监听
      */
     public void login(final String username, final String password, final OnResultListener onResultListener) {
         LoginRequester requester = new LoginRequester(username, password, new OnHttpCodeListener<LoginInfo>() {
@@ -136,7 +136,7 @@ public class UserManager extends BaseManager {
                 }
                 onResultListener.onResult(code);
             }
-        } );
+        });
         requester.doPost();
     }
 
