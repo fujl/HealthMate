@@ -5,6 +5,7 @@ import android.text.TextWatcher;
 
 /**
  * Created by Lxx on 2017/1/6.
+ *
  */
 
 public class SimpleTextWatcher implements TextWatcher {

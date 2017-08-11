@@ -15,6 +15,7 @@ import com.mobile.healthmate.app.App;
 import com.mobile.healthmate.app.BaseActivity;
 import com.mobile.healthmate.app.Logger;
 import com.mobile.healthmate.manager.user.UserManager;
+import com.mobile.healthmate.ui.launch.LaunchActivity;
 import com.mobile.healthmate.ui.login.LoginActivity;
 
 public class EntryActivity extends BaseActivity {
@@ -28,12 +29,13 @@ public class EntryActivity extends BaseActivity {
         @Override
         public boolean handleMessage(Message msg) {
             if (msg.what == HANDLER_WHAT_START) {
-                if (userManager.isLogin()) {
-                    // 自动登录
-                } else {
-                    // 进入登录页
-                    startActivity(new Intent(getActivity(), LoginActivity.class));
-                }
+//                if (userManager.isLogin()) {
+//                    // 自动登录
+//                } else {
+//                    // 进入登录页
+//                    startActivity(new Intent(getActivity(), LoginActivity.class));
+//                }
+                //startActivity(new Intent(getActivity(), LaunchActivity.class)); // 启动页
                 finish();
                 return true;
             }
