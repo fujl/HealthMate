@@ -9,15 +9,9 @@
         android:id="@+id/test_right_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:function="TITLE|RIGHT_BTN"
+        app:function="TITLE|LEFT_BTN|RIGHT_TITLE"
+        app:leftOnClick="onBackClick"
         android:background="@color/white"
-        app:rightText="录入"
-        app:titleText="@string/tab_test"/>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:textSize="18sp"
-        android:text="@string/app_module_wait_for_develop" />
+        app:rightText="下一步"
+        app:titleText="录入基本信息"/>
 </LinearLayout>

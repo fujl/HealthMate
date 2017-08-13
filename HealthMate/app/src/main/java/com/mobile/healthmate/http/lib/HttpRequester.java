@@ -40,7 +40,7 @@ public abstract class HttpRequester {
             try {
                 if (code == HttpURLConnection.HTTP_OK) {
                     JSONObject jsonObject = new JSONObject(content);
-                    HttpRequester.this.onResult(jsonObject.optInt("code"), jsonObject);
+                    HttpRequester.this.onResult(jsonObject.optInt("errCode"), jsonObject);
                 } else {
                     onError(new IOException("HTTP CODE NOT 200"));
                 }

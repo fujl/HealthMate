@@ -33,4 +33,13 @@
     <string name="personal_collect">我的收藏</string>
     <string name="personal_msg">我的消息</string>
     <string name="personal_setting">我的设置</string>
+
+    <string name="home_search_tip">输入疾病症状找医生</string>
+
+    <!-- 数据加载 -->
+    <string name="pull_to_refresh_footer_refreshing_label">正在加载&#8230;</string>
+    <string name="refresh_pull_to_refresh">下拉可以刷新&#8230;</string>
+    <string name="refresh_release_to_refresh">松开可以刷新&#8230;</string>
+    <string name="refresh_refreshing">正在努力加载中&#8230;</string>
+    <string name="title_activity_health_test_submit">HealthTestSubmitActivity</string>
 </resources>

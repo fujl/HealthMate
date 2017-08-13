@@ -58,4 +58,18 @@
         <attr name="arrowvisiable" format="boolean"/>
         <attr name="cutlinevisiable" format="boolean"/>
     </declare-styleable>
+
+    <declare-styleable name="ExtendedListView">
+        <attr name="scrollBarPanel" format="reference"/>
+        <attr name="scrollBarPanelInAnimation" format="reference"/>
+        <attr name="scrollBarPanelOutAnimation" format="reference"/>
+    </declare-styleable>
+    <declare-styleable name="ProportionLayout">
+        <attr name="scaleSize" format="float"/>
+        <attr name="isAdaptive" format="boolean"/>
+        <attr name="pplayoutorientation">
+            <enum name="HORIZONTAL" value="0"/>
+            <enum name="VERTICAL" value="1"/>
+        </attr>
+    </declare-styleable>
 </resources>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp">
+
+            <!--头像-->
+            <com.mobile.healthmate.app.lib.imageloader.view.AsyncImageView
+                android:id="@+id/image_view"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="15dp"
+                app:loadFailedDrawable="@drawable/ic_login_avatar"
+                app:loadingDrawable="@drawable/ic_login_avatar"
+                app:src="@drawable/ic_login_avatar" />
+
+            <ImageView
+                android:id="@+id/cost_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/image_view"
+                android:layout_alignRight="@id/image_view"
+                android:src="@drawable/ic_login_avatar"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/cc_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="标题"
+                android:textColor="@color/black"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/cc_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="内容"
+                android:textColor="#7f7f7f"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/cc_create_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="2017-8-8"
+                android:textColor="#7f7f7f"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/line" />
+</LinearLayout>

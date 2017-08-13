@@ -1,4 +1,4 @@
-package com.guijk.doctor.http;
+package com.mobile.healthmate.http;
 
 import android.support.annotation.NonNull;
 import android.support.annotation.Size;
