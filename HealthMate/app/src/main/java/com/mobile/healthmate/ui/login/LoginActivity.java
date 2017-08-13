@@ -1,5 +1,6 @@
 package com.mobile.healthmate.ui.login;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.InputType;
@@ -20,6 +21,7 @@ import com.mobile.healthmate.app.lib.viewinject.FindViewById;
 import com.mobile.healthmate.app.lib.viewinject.ViewInjecter;
 import com.mobile.healthmate.manager.OnResultListener;
 import com.mobile.healthmate.manager.user.UserManager;
+import com.mobile.healthmate.ui.main.MainActivity;
 import com.mobile.healthmate.view.CheckableImageView;
 
 public class LoginActivity extends BaseActivity {
@@ -135,6 +137,11 @@ public class LoginActivity extends BaseActivity {
         });
     }
 
+    public void onTestClick(View view) {
+//        startActivity(MainActivity.class);
+        startActivity(new Intent(getActivity(), MainActivity.class));
+    }
+
     public void onLoginClick(View view) {
         String username = usernameView.getText().toString();
         String pwd = pwdView.getText().toString();
@@ -145,7 +152,8 @@ public class LoginActivity extends BaseActivity {
             public void onResult(int result) {
                 dismissLoadingProgressDialog();
                 if (result == RESULT_CODE_OK) {
-//                    startActivity(MainActivity);
+                    //startActivity(MainActivity.class);
+                    startActivity(new Intent(getActivity(), MainActivity.class));
                 } else {
                     showToast(R.string.login_result_fail);
                 }
@@ -154,4 +162,6 @@ public class LoginActivity extends BaseActivity {
 
 
     }
+
+
 }

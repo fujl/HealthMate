@@ -38,4 +38,24 @@
             <flag name="RIGHT_BTN" value="32"/>
         </attr>
     </declare-styleable>
+
+    <declare-styleable name="TabItemView">
+        <attr name="itemImage" format="reference"/>
+        <attr name="itemImageSelected" format="reference"/>
+
+        <attr name="itemText" format="string"/>
+        <attr name="itemTextColor" format="color"/>
+        <attr name="itemTextColorSelected" format="color"/>
+
+        <attr name="isItemSelected" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="ItemView">
+        <attr name="icon" format="reference"/>
+        <attr name="title" format="string"/>
+        <attr name="content" format="string"/>
+        <attr name="contentcolor" format="color"/>
+        <attr name="arrowvisiable" format="boolean"/>
+        <attr name="cutlinevisiable" format="boolean"/>
+    </declare-styleable>
 </resources>

@@ -1,10 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.mobile.healthmate.app.MainActivity">
+    android:orientation="vertical">
 
-</android.support.constraint.ConstraintLayout>
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line_size"
+        android:background="@color/line"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <com.mobile.healthmate.ui.main.view.TabItemView
+            android:id="@+id/tab_item_online"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:itemImage="@drawable/ic_tab_online_normal"
+            app:itemImageSelected="@drawable/ic_tab_online_press"
+            app:itemText="@string/tab_online"/>
+
+        <com.mobile.healthmate.ui.main.view.TabItemView
+            android:id="@+id/tab_item_test"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:itemImage="@drawable/ic_tab_test_normal"
+            app:itemImageSelected="@drawable/ic_tab_test_press"
+            app:itemText="@string/tab_test" />
+
+        <com.mobile.healthmate.ui.main.view.TabItemView
+            android:id="@+id/tab_item_personal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:itemImage="@drawable/ic_tab_personal_normal"
+            app:itemImageSelected="@drawable/ic_tab_personal_press"
+            app:itemText="@string/tab_personal"/>
+
+        <com.mobile.healthmate.ui.main.view.TabItemView
+            android:id="@+id/tab_item_shop"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:itemImage="@drawable/ic_tab_shop_normal"
+            app:itemImageSelected="@drawable/ic_tab_shop_press"
+            app:itemText="@string/tab_shop"/>
+
+        <com.mobile.healthmate.ui.main.view.TabItemView
+            android:id="@+id/tab_item_video"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:itemImage="@drawable/ic_tab_video_normal"
+            app:itemImageSelected="@drawable/ic_tab_video_press"
+            app:itemText="@string/tab_video"/>
+    </LinearLayout>
+
+</LinearLayout>

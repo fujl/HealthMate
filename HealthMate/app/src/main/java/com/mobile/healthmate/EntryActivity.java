@@ -17,6 +17,7 @@ import com.mobile.healthmate.app.Logger;
 import com.mobile.healthmate.manager.user.UserManager;
 import com.mobile.healthmate.ui.launch.LaunchActivity;
 import com.mobile.healthmate.ui.login.LoginActivity;
+import com.mobile.healthmate.ui.main.MainActivity;
 
 public class EntryActivity extends BaseActivity {
     public static final int REQUEST_CODE_PERMISSIONS_STORAGE = 14;
@@ -33,9 +34,10 @@ public class EntryActivity extends BaseActivity {
 //                    // 自动登录
 //                } else {
 //                    // 进入登录页
-//                    startActivity(new Intent(getActivity(), LoginActivity.class));
+                   startActivity(new Intent(getActivity(), LoginActivity.class));
 //                }
                 //startActivity(new Intent(getActivity(), LaunchActivity.class)); // 启动页
+               // startActivity(new Intent(getActivity(), MainActivity.class)); // 启动页
                 finish();
                 return true;
             }

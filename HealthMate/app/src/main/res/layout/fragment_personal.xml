@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/info_rl"
+                android:layout_width="match_parent"
+                android:layout_height="144dp"
+                android:background="@drawable/bg_entry_shape">
+
+                <LinearLayout
+                    android:id="@+id/head_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="28dp"
+                    android:background="@drawable/bg_avatar_elevation_shape"
+                    android:orientation="vertical"
+                    android:padding="4dp">
+
+                    <com.mobile.healthmate.app.lib.imageloader.view.AsyncImageView
+                        android:id="@+id/head"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_centerVertical="true"
+                        app:imageShape="circle"
+                        app:loadFailedDrawable="@drawable/ic_login_avatar"
+                        app:loadingDrawable="@drawable/ic_login_avatar"
+                        app:src="@drawable/ic_login_avatar"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="44dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/head_image"
+                    >
+                    <TextView
+                        android:id="@+id/login"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/login"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="17sp"/>
+                    <TextView
+                        android:id="@+id/register"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40dp"
+                        android:text="@string/register"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="17sp"/>
+                </LinearLayout>
+            </RelativeLayout>
+            <com.mobile.healthmate.view.ItemView
+                android:id="@+id/personal_report"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="11dp"
+                app:cutlinevisiable="true"
+                app:arrowvisiable="true"
+                app:contentcolor="#7f7f7f"
+
+                app:icon="@drawable/ic_personal_report"
+                app:title="@string/personal_report"/>
+            <com.mobile.healthmate.view.ItemView
+                android:id="@+id/personal_collect"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                app:cutlinevisiable="true"
+                app:arrowvisiable="true"
+                app:icon="@drawable/ic_personal_collect"
+                app:title="@string/personal_collect"/>
+            <com.mobile.healthmate.view.ItemView
+                android:id="@+id/personal_msg"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                app:cutlinevisiable="true"
+                app:arrowvisiable="true"
+                app:icon="@drawable/ic_personal_msg"
+                app:title="@string/personal_msg"/>
+            <com.mobile.healthmate.view.ItemView
+                android:id="@+id/personal_setting"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                app:cutlinevisiable="true"
+                android:layout_marginTop="11dp"
+                app:arrowvisiable="true"
+                app:contentcolor="#7f7f7f"
+                app:icon="@drawable/ic_personal_setting"
+                app:title="@string/personal_setting"/>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

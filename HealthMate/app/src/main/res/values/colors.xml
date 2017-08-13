@@ -18,4 +18,14 @@
     <color name="colorBubbleText">#333333</color>
 
     <color name="login_btn_gray">#cccccc</color>
+
+    <color name="test_btn_background_color">#dcba3d</color>
+
+    <!--文字  一般的颜色-->
+    <color name="textNormal">#808080</color>
+
+    <color name="colorWhite">#FFFFFF</color>
+
+    <color name="commonLineColor">#ebebeb</color>//普通
+
 </resources>

@@ -11,10 +11,26 @@
     <string name="user_name_tip">"请输入用户名"</string>
     <string name="user_pwd_tip">"请输入密码"</string>
     <string name="login">登 录</string>
+    <string name="register">注 册</string>
+    <string name="test">测 试</string>
 
     <string name="toast_time_out">当前网络不顺畅，请检查网络</string>
     <string name="toast_net_error">当前没有网络，请检查网络是否开启</string>
     <string name="toast_service_error">服务器异常，请重试</string>
 
     <string name="login_result_fail">登录失败</string>
+    <string name="title_activity_main">MainActivity</string>
+
+    <string name="tab_online">在线看病</string>
+    <string name="tab_test">健康测试</string>
+    <string name="tab_personal">我的</string>
+    <string name="tab_shop">闪电购物</string>
+    <string name="tab_video">教学视频</string>
+
+    <string name="exit_application">再按一次退出应用</string>
+    <string name="app_module_wait_for_develop">该功能暂未开放，敬请期待...</string>
+    <string name="personal_report">我的健康报告</string>
+    <string name="personal_collect">我的收藏</string>
+    <string name="personal_msg">我的消息</string>
+    <string name="personal_setting">我的设置</string>
 </resources>
