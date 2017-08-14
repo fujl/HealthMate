@@ -1,6 +1,6 @@
 <resources>
     <dimen name="fab_margin">16dp</dimen>
-
+    <dimen name="common_line_height">1px</dimen>
     <dimen name="tab_text">13sp</dimen>
     <dimen name="line_size">1px</dimen>
 </resources>

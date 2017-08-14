@@ -1,5 +1,6 @@
 package com.mobile.healthmate.ui.main;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,6 +15,7 @@ import com.mobile.healthmate.http.OnHttpCodeListener;
 import com.mobile.healthmate.http.ResultList;
 import com.mobile.healthmate.http.online.CmsContentRequester;
 import com.mobile.healthmate.model.online.CmsContentModel;
+import com.mobile.healthmate.ui.HealthTest.HealthTestSubmitActivity;
 import com.mobile.healthmate.ui.main.adapter.HomeBannerAdapter;
 import com.mobile.healthmate.ui.main.adapter.CmsContentAdapter;
 import com.mobile.healthmate.view.AutoBannerView;
@@ -90,6 +92,11 @@ public class OnlineFragment extends BaseFragment {
 //                CommonUtils.sendClickCount(ClickCountRequest.MODULE_TYPE_HOME_TOP_BANNER, String.valueOf(info.getId()));
 //                HomeDataManager homeDataManager = HApplication.getInstance().getManager(HomeDataManager.class);
 //                homeDataManager.startActivity(info.getJumpType(), info.getAppColumn(), info.getContent(), getContext());
+                if (info.getCcId() == 14) {
+                    Intent intent = new Intent();
+                    intent.setClass(getContext(), HealthTestSubmitActivity.class);
+                    startActivityForResult(intent, 0);
+                }
             }
         });
     }

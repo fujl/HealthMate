@@ -42,4 +42,10 @@
     <string name="refresh_release_to_refresh">松开可以刷新&#8230;</string>
     <string name="refresh_refreshing">正在努力加载中&#8230;</string>
     <string name="title_activity_health_test_submit">HealthTestSubmitActivity</string>
+    <string name="title_activity_face">FaceActivity</string>
+
+    <!-- 相机相册 -->
+    <string name="insertsdcard">对不起，请插入SD卡</string>
+    <string name="notsupport">本设备系统不支持该操作</string>
+    <string name="permission_msg_camera">健康伴侣需要获取您的相机权限，用于拍照等功能。如果您拒绝，将无法使用拍照等功能！</string>
 </resources>

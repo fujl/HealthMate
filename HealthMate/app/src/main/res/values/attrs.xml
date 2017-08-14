@@ -72,4 +72,47 @@
             <enum name="VERTICAL" value="1"/>
         </attr>
     </declare-styleable>
+    <!-- 通用数据填充控件属性 -->
+    <declare-styleable name="CommonItemView">
+        <attr name="commonItemTitle" format="string"/>
+        <attr name="commonItemTitleColor" format="color"/>
+        <attr name="commonItemTitleTextSize" format="dimension"/>
+        <attr name="commonItemContent" format="string"/>
+        <attr name="commonItemContentColor" format="color"/>
+        <attr name="commonItemContentTextSize" format="dimension"/>
+        <attr name="commonItemContentLeftIcon" format="reference"/>
+        <attr name="commonItemContentRightIcon" format="reference"/>
+        <attr name="commonItemContentHint" format="string"/>
+        <attr name="commonItemInputMaxLength" format="integer"/>
+        <attr name="commonItemLineState" format="enum">
+            <enum name="onlyBottom" value="1"/>
+            <enum name="onlyTop" value="2"/>
+            <enum name="bothAnd" value="3"/>
+            <enum name="neitherNor" value="4"/>
+        </attr>
+        <attr name="commonItemType" format="enum">
+            <enum name="show" value="1"/>
+            <enum name="input" value="2"/>
+        </attr>
+        <attr name="commonItemSimpleImeOption" format="enum">
+            <enum name="actionDone" value="1"/>
+            <enum name="actionGo" value="2"/>
+            <enum name="actionNext" value="3"/>
+            <enum name="actionNone" value="4"/>
+            <enum name="actionPrevious" value="5"/>
+            <enum name="actionSearch" value="6"/>
+            <enum name="actionSend" value="7"/>
+            <enum name="actionUnspecified" value="8"/>
+        </attr>
+        <attr name="commonItemSimpleInputType" format="enum">
+            <enum name="typeNull" value="1"/>
+            <enum name="typeText" value="2"/>
+            <enum name="typeNumber" value="3"/>
+            <enum name="typePassword" value="4"/>
+            <enum name="typePasswordVisible" value="5"/>
+            <enum name="typeDate" value="6"/>
+            <enum name="typeTextMultiLine" value="7"/>
+            <enum name="typeNumberDecimal" value="8"/>
+        </attr>
+    </declare-styleable>
 </resources>

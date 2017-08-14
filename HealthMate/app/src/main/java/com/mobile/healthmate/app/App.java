@@ -9,6 +9,7 @@ import com.mobile.healthmate.BuildConfig;
 import com.mobile.healthmate.app.lib.imageloader.ImageLoader;
 import com.mobile.healthmate.manager.NetworkManager;
 import com.mobile.healthmate.manager.SdManager;
+import com.mobile.healthmate.manager.report.ReportManager;
 import com.mobile.healthmate.manager.user.UserManager;
 import com.mobile.healthmate.ui.main.adapter.ExceptionCaughtAdapter;
 
@@ -141,6 +142,7 @@ public class App extends Application {
         lists.add(new UserManager());               // 用户管理
 
         lists.add(new SdManager());                 // 路径管理类
+        lists.add(new ReportManager());             // 报告管理
     }
 
     @Retention(RetentionPolicy.RUNTIME)

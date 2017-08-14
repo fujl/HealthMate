@@ -1,33 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.mobile.healthmate.ui.HealthTest.HealthTestSubmitActivity">
+    android:orientation="vertical">
 
-    <android.support.design.widget.AppBarLayout
+    <com.mobile.healthmate.view.TopBar
+        android:id="@+id/test_right_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:theme="@style/AppTheme.AppBarOverlay">
+        android:background="@color/white"
+        app:function="TITLE|LEFT_BTN|RIGHT_TITLE"
+        app:leftOnClick="onBackClick"
+        app:rightText="下一步"
+        app:titleText="录入您的基本信息"/>
 
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            app:popupTheme="@style/AppTheme.PopupOverlay" />
-
-    </android.support.design.widget.AppBarLayout>
-
-    <include layout="@layout/content_health_test_submit" />
-
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="@dimen/fab_margin"
-        app:srcCompat="@android:drawable/ic_dialog_email" />
+        android:layout_marginTop="1dp"
+        android:background="@color/white"
+        android:orientation="vertical"
+        >
 
-</android.support.design.widget.CoordinatorLayout>
+        <com.mobile.healthmate.view.CommonItemView
+            android:id="@+id/user_gender"
+            style="@style/CommonItemInfoView"
+            app:commonItemContentColor="@color/textTitle"
+            app:commonItemContentHint="请选择您的性别"
+            app:commonItemContentRightIcon="@drawable/common_arrow"
+            app:commonItemLineState="onlyBottom"
+            app:commonItemTitle="您的性别"/>
+
+        <com.mobile.healthmate.view.CommonItemView
+            android:id="@+id/user_age"
+            style="@style/CommonItemInfoView"
+            app:commonItemContentColor="@color/textTitle"
+            app:commonItemContentHint="请选择您的年龄"
+            app:commonItemContentRightIcon="@drawable/common_arrow"
+            app:commonItemLineState="onlyBottom"
+            app:commonItemTitle="您的年龄"/>
+
+        <com.mobile.healthmate.view.CommonItemView
+            android:id="@+id/user_cold"
+            style="@style/CommonItemInfoView"
+            app:commonItemContentColor="@color/textTitle"
+            app:commonItemContentHint="请选择您的寒热情况"
+            app:commonItemContentRightIcon="@drawable/common_arrow"
+            app:commonItemLineState="onlyBottom"
+            app:commonItemTitle="寒热情况"/>
+
+        <com.mobile.healthmate.view.CommonItemView
+            android:id="@+id/user_sweating"
+            style="@style/CommonItemInfoView"
+            app:commonItemContentColor="@color/textTitle"
+            app:commonItemContentHint="请选择您的出汗情况"
+            app:commonItemContentRightIcon="@drawable/common_arrow"
+            app:commonItemLineState="onlyBottom"
+            app:commonItemTitle="出汗情况"/>
+
+        <com.mobile.healthmate.view.CommonItemView
+            android:id="@+id/user_pain"
+            style="@style/CommonItemInfoView"
+            app:commonItemContentColor="@color/textTitle"
+            app:commonItemContentHint="请选择您的疼痛情况"
+            app:commonItemContentRightIcon="@drawable/common_arrow"
+            app:commonItemLineState="onlyBottom"
+            app:commonItemTitle="疼痛情况"/>
+
+        <com.mobile.healthmate.view.CommonItemView
+            android:id="@+id/user_sleep"
+            style="@style/CommonItemInfoView"
+            app:commonItemContentColor="@color/textTitle"
+            app:commonItemContentHint="请选择您的睡眠质量"
+            app:commonItemContentRightIcon="@drawable/common_arrow"
+            app:commonItemLineState="onlyBottom"
+            app:commonItemTitle="睡眠质量"/>
+    </LinearLayout>
+
+</LinearLayout>

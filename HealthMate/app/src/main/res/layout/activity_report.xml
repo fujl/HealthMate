@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <com.mobile.healthmate.view.TopBar
+        android:id="@+id/test_right_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:function="TITLE|LEFT_BTN"
+        android:background="@color/white"
+        app:titleText="健康报告"/>
+
+    <com.github.mikephil.charting.charts.PieChart
+        android:id="@+id/spread_pie_chart"
+        android:layout_width="match_parent"
+        android:layout_height="320dp"
+        android:layout_gravity="center_horizontal"
+        />
+    <Button
+        android:id="@+id/take_hand_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="10dp"
+        android:clickable="true"
+        android:onClick="onReportDetailClick"
+        android:text="详细报告"
+        android:textColor="@color/white"
+        android:background="@color/take_btn_background_color"
+        android:textSize="19sp"/>
+</LinearLayout>

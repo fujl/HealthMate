@@ -9,9 +9,14 @@
         android:id="@+id/test_right_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:function="TITLE|LEFT_BTN|RIGHT_TITLE"
-        app:leftOnClick="onBackClick"
+        app:function="TITLE|LEFT_BTN"
         android:background="@color/white"
-        app:rightText="下一步"
-        app:titleText="录入基本信息"/>
+        app:titleText="健康评估报告"/>
+    <com.mobile.healthmate.view.listview.PullRefreshView
+        android:id="@+id/report_item_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:cacheColorHint="@color/transparent"
+        android:divider="@null"
+        android:dividerHeight="0dp"/>
 </LinearLayout>

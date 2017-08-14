@@ -21,8 +21,13 @@
 
     <color name="test_btn_background_color">#dcba3d</color>
 
+    <color name="take_btn_background_color">#449d44</color>
+
     <!--文字  一般的颜色-->
     <color name="textNormal">#808080</color>
+
+    <!--标题文字 颜色-->
+    <color name="textTitle">#4c4c4c</color>
 
     <color name="colorWhite">#FFFFFF</color>
 
@@ -31,5 +36,4 @@
     <color name="status_bar_bg">#111111</color>
 
     <color name="app_bg">#F7F7F7</color>
-
 </resources>
