@@ -37,13 +37,11 @@ import static com.mobile.healthmate.app.HConstant.RESULT_CODE_REG_REPORT_FINISH;
 
 public class FaceActivity extends BaseActivity {
     public static final String KEY_HEALTH_REPORT = "key_health_report";
-
+    public static final String KEY_CMS_CONTENT = "key_cms_content";
     private HealthReport healthReport;
 
     /** 设置昵称数据传递key */
     private static final int REQUEST_CODE_PERMISSIONS_CAMERA = 1;
-
-    private final String TAG = FaceActivity.class.getSimpleName();
 
     @FindViewById(R.id.test_right_btn)
     private TopBar mTopBar;

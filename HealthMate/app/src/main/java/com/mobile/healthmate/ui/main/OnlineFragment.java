@@ -21,9 +21,12 @@ import com.mobile.healthmate.ui.main.adapter.CmsContentAdapter;
 import com.mobile.healthmate.view.AutoBannerView;
 import com.mobile.healthmate.view.listview.OnPullRefreshListener;
 import com.mobile.healthmate.view.listview.PullRefreshView;
+import com.mobile.healthmate.view.listview.SimpleBaseAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import static com.mobile.healthmate.ui.HealthTest.FaceActivity.KEY_CMS_CONTENT;
 
 /**
  * 在线看病
@@ -87,14 +90,15 @@ public class OnlineFragment extends BaseFragment {
         mBannerAdapter.setOnBannerClickListener(new HomeBannerAdapter.OnBannerClickListener() {
             @Override
             public void onClick(CmsContentModel info) {
-                // umeng点击事件
-//                mobClickManager.onHomeClick("banner", String.valueOf(info.getId()));
-//                CommonUtils.sendClickCount(ClickCountRequest.MODULE_TYPE_HOME_TOP_BANNER, String.valueOf(info.getId()));
-//                HomeDataManager homeDataManager = HApplication.getInstance().getManager(HomeDataManager.class);
-//                homeDataManager.startActivity(info.getJumpType(), info.getAppColumn(), info.getContent(), getContext());
                 if (info.getCcId() == 14) {
                     Intent intent = new Intent();
                     intent.setClass(getContext(), HealthTestSubmitActivity.class);
+                    startActivityForResult(intent, 0);
+                } else {
+                    // WebActivity
+                    Intent intent = new Intent();
+                    intent.putExtra(KEY_CMS_CONTENT, info);
+                    intent.setClass(getContext(), WebActivity.class);
                     startActivityForResult(intent, 0);
                 }
             }
@@ -114,6 +118,15 @@ public class OnlineFragment extends BaseFragment {
         });
 
         mAdapter = new CmsContentAdapter(this.getContext());
+        mAdapter.setOnAdapterItemClickListener(new SimpleBaseAdapter.OnAdapterItemClickListener<CmsContentModel>() {
+            @Override
+            public void onAdapterItemClick(int position, CmsContentModel cmsContentModel) {
+                Intent intent = new Intent();
+                intent.putExtra(KEY_CMS_CONTENT, cmsContentModel);
+                intent.setClass(getContext(), WebActivity.class);
+                startActivityForResult(intent, 0);
+            }
+        });
         pullRefreshView.setAdapter(mAdapter);
         pullRefreshView.startPullRefresh();
         loadData();

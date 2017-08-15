@@ -5,6 +5,7 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -14,17 +15,34 @@ import android.support.v4.app.ActivityCompat;
 import com.mobile.healthmate.app.App;
 import com.mobile.healthmate.app.BaseActivity;
 import com.mobile.healthmate.app.Logger;
+import com.mobile.healthmate.app.lib.http.StringResponseHandler;
+import com.mobile.healthmate.app.lib.viewinject.FindViewById;
+import com.mobile.healthmate.app.lib.viewinject.ViewInjecter;
 import com.mobile.healthmate.manager.user.UserManager;
+import com.mobile.healthmate.model.online.CmsContentModel;
+import com.mobile.healthmate.ui.HealthTest.HealthTestSubmitActivity;
 import com.mobile.healthmate.ui.launch.LaunchActivity;
 import com.mobile.healthmate.ui.login.LoginActivity;
 import com.mobile.healthmate.ui.main.MainActivity;
+import com.mobile.healthmate.ui.main.WebActivity;
+import com.mobile.healthmate.ui.main.adapter.HomeBannerAdapter;
+import com.mobile.healthmate.ui.main.adapter.LaunchBannerAdapter;
+import com.mobile.healthmate.view.AutoBannerView;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import static com.mobile.healthmate.ui.HealthTest.FaceActivity.KEY_CMS_CONTENT;
 
 public class EntryActivity extends BaseActivity {
     public static final int REQUEST_CODE_PERMISSIONS_STORAGE = 14;
     public static final Logger logger = new Logger("WEB");
     private static final int HANDLER_WHAT_START = 2;
-    @App.Manager
-    private UserManager userManager;
+
+    @FindViewById(R.id.banner_gallery)
+    private AutoBannerView mBannerGalleryView;
+
+    private LaunchBannerAdapter mBannerAdapter;
 
     private Handler handler = new Handler(new Handler.Callback() {
         @Override
@@ -34,11 +52,17 @@ public class EntryActivity extends BaseActivity {
 //                    // 自动登录
 //                } else {
 //                    // 进入登录页
-                   startActivity(new Intent(getActivity(), LoginActivity.class));
+//                   startActivity(new Intent(getActivity(), LoginActivity.class));
 //                }
                 //startActivity(new Intent(getActivity(), LaunchActivity.class)); // 启动页
                // startActivity(new Intent(getActivity(), MainActivity.class)); // 启动页
-                finish();
+//                finish();
+
+
+
+
+                loadData();
+
                 return true;
             }
             return false;
@@ -50,8 +74,34 @@ public class EntryActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         logger.i("start");
         setContentView(R.layout.activity_entry);
+        ViewInjecter.inject(this);
         logger.i("end");
         checkStoragePermission();
+
+        mBannerGalleryView.setWaitMilliSceond(1000*60*60*24*365);
+        mBannerAdapter = new LaunchBannerAdapter(this, new ArrayList<String>());
+        mBannerAdapter.setOnBannerClickListener(new LaunchBannerAdapter.OnBannerClickListener() {
+            @Override
+            public void onClick(String info) {
+                int imgId = Integer.parseInt(info);
+                if (imgId == R.drawable.launch_three) {
+                    startActivity(new Intent(getActivity(), LoginActivity.class));
+                    finish();
+                }
+            }
+        });
+    }
+
+    private void loadData() {
+        List<String> imageList = new ArrayList<String>();
+        String launch_1 = "" + R.drawable.launch_one;
+        String launch_2 = "" + R.drawable.launch_two;
+        String launch_3 = "" + R.drawable.launch_three;
+        imageList.add(launch_1);
+        imageList.add(launch_2);
+        imageList.add(launch_3);
+        mBannerAdapter.changeItems(imageList);
+        mBannerGalleryView.setAdapter(mBannerAdapter);
     }
 
     // 检查权限

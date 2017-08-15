@@ -17,6 +17,22 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    signingConfigs {
+        release {
+            storeFile file("../health.keystore")
+            storePassword "longmasterhealthksp"
+            keyAlias "health"
+            keyPassword "longmasterhealthkap"
+        }
+
+        debug {
+            storeFile file("../health.keystore")
+            storePassword "longmasterhealthksp"
+            keyAlias "health"
+            keyPassword "longmasterhealthkap"
+        }
+    }
 }
 
 dependencies {

@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 
 import com.mobile.healthmate.R;
+import com.mobile.healthmate.app.BaseActivity;
 import com.mobile.healthmate.app.lib.viewinject.FindViewById;
 import com.mobile.healthmate.model.HealthTest.HealthReport;
 import com.mobile.healthmate.ui.HealthTest.adapter.ReportItemAdapter;
@@ -15,7 +16,7 @@ import com.mobile.healthmate.view.listview.PullRefreshView;
 
 import static com.mobile.healthmate.ui.HealthTest.FaceActivity.KEY_HEALTH_REPORT;
 
-public class ReportDetailActivity extends AppCompatActivity {
+public class ReportDetailActivity extends BaseActivity {
 
     private PullRefreshView pullRefreshView;
 
